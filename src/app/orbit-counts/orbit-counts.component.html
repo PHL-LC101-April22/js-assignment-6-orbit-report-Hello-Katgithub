@@ -1,6 +1,32 @@
 <h3>Satellite Count:</h3>
 <div class="counts">
-	<div>Total: <span class="counts-total">NaN</span></div>
+	<!-- Writing a loop -->
+	<div>Total: <span class="counts-total">{{satellites.length}}</span>
+<!-- <input type="text" name="total" id="total" placeholder="Total" /> -->
+	</div>
+	<!-- <tr class="data-row" *ngFor="let satellite of satellites"> -->
+
+<!-- relate this to countByType FUNCTION in orbit-counts-component -->
+		<div>Space Debris<span> {{countByType("Space Debris")}}	</span></div>
+		<div>Communication<span>{{countByType("Communication")}}</span></div>
+		<div>Probe<span>{{countByType("Probe")}}</span></div>
+		<div>Positioning<span>{{countByType("Positioning")}}</span></div>
+		<div>Space Station<span>{{countByType("Space Station")}}</span></div>
+		<div>Telescope<span>{{countByType("Telescope")}}</span></div>
+
+	<!-- <button type="button"> SEARCH</button>
+	<input type="text" /><button>SEARCH</button> -->
+
 </div>
 
 <!-- TODO 4: add logic to count number of satellites displayed -->
+
+
+<!-- <tr class="data-row" *ngFor="let satellite of satellites">
+	<td>{{satellite.name}}</td>
+	<td [class.warning]="satellite.isSpaceDebris()">{{satellite.type}}</td>
+	<td>{{satellite.operational}}</td>
+	<td>{{satellite.orbitType}}</td>
+	<td>{{satellite.launchDate}}</td>
+	<td>{{satellite.isSpaceDebris}}</td>
+</tr> -->
